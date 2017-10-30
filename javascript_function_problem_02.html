@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        var A_mid = 10;
+        var A_end = 8;
+        var B_mid = 1;
+        var B_end = 2;
+        var C_mid = 9;
+        var C_end = 5;
+
+		var Result = (x, mid, end) => {
+			var result = "";
+			//중간 출력
+			for (var i = 0; i < mid; ++i)
+			{
+				result += "*";
+			}
+			for (var i = 0; i < 10-mid; ++i)
+			{
+				result += "_";
+			}
+
+			result += " + ";
+			// 기말 출력
+			for (var i = 0; i < end; ++i)
+			{
+				result += "*";
+			}
+			for (var i = 0; i < 10-end; ++i)
+			{
+				result += "_";
+			}
+
+			result += " = ";
+			//총합 출력
+			for (var i = 0; i < mid+end; ++i)
+			{
+				result += "*";
+			}
+			for (var i = 0; i < 20-(mid+end); ++i)
+			{
+				result += "_";
+			}
+			console.log(x + " : " + result);
+		}
+
+		Result('A', A_mid, A_end);
+		Result('B', B_mid, B_end);
+		Result('C', C_mid, C_end);
+    </script>
+</head>
+<body>
+</body>
+</html>

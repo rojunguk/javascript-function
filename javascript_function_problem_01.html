@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+
+       var A_javascript = 90;
+       var A_python= 80;
+       var A_java = 50;
+       var A_ruby = 40;
+       var A_swift = 10;
+
+       var B_javascript = 90;
+       var B_python= 30;
+       var B_java = 100;
+       var B_ruby = 50;
+       var B_swift = 50;
+
+
+       var C_javascript = 20;
+       var C_python= 30;
+       var C_java = 60;
+       var C_ruby = 50;
+       var C_swift = 20;
+
+	   var Avg = (javascript, pyth, java, ruby, swift) => {
+		   var avg_grade = (javascript + pyth + java + ruby + swift) / 5;
+		   return avg_grade;
+		   }
+		   
+       var Max = (javascript, pyth, java, ruby, swift) => {
+		   var max = new Array(javascript, pyth, java, ruby, swift);
+		   var max_grade = 0;
+		   for (i=0; i<=max.length; i++) {
+			   if(max[i] > max_grade) max_grade = max[i];
+		   }
+		   return max_grade;
+	   }
+
+	   var Min = (javascript, pyth, java, ruby, swift) => {
+		   var min = new Array(javascript, pyth, java, ruby, swift);
+		   var min_grade = 100;
+		   for (i=0; i<=min.length-1; i++) {
+			   if(min[i] < min_grade) min_grade = min[i];
+		   }
+		   return min_grade;
+	   }
+
+	   var A_average = Avg(A_javascript, A_python, A_java, A_ruby, A_swift);
+       var B_average = Avg(B_javascript, B_python, B_java, B_ruby, B_swift);
+       var C_average = Avg(C_javascript, C_python, C_java, C_ruby, C_swift);
+
+       var A_max = Max(A_javascript, A_python, A_java, A_ruby, A_swift);
+       var B_max = Max(B_javascript, B_python, B_java, B_ruby, B_swift);
+       var C_max = Max(C_javascript, C_python, C_java, C_ruby, C_swift);
+
+	   var A_min = Min(A_javascript, A_python, A_java, A_ruby, A_swift);
+       var B_min = Min(B_javascript, B_python, B_java, B_ruby, B_swift);
+       var C_min = Min(C_javascript, C_python, C_java, C_ruby, C_swift);
+
+       console.log('A 학생의 평균 점수는 ' + A_average + ' , 최고 점수는 ' + A_max + ' , 최하 점수는 ' + A_min + ' 입니다.');
+       console.log('B 학생의 평균 점수는 ' + B_average + ' , 최고 점수는 ' + B_max + ' , 최하 점수는 ' + B_min + ' 입니다.');
+       console.log('C 학생의 평균 점수는 ' + C_average + ' , 최고 점수는 ' + C_max + ' , 최하 점수는 ' + C_min + ' 입니다.');
+
+    </script>
+</head>
+<body>
+</body>
+</html>
