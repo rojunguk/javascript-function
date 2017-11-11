@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+      function print_fizz_buzz() {
+        for (var i=1; i<=100; i++) {
+			var result = "";
+
+			if(i%15 == 0) {
+				result += "fizzbuzz";
+			} else if(i%3 == 0) {
+				result += "fizz";
+			} else if(i%5 == 0) {
+				result += "buzz";
+			} else {
+				result += i;
+			}
+
+			console.log(result);
+        }
+      }
+
+      print_fizz_buzz();
+    </script>
+</head>
+<body>
+</body>
+</html>
